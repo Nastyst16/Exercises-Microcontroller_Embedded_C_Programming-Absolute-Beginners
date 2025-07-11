@@ -72,10 +72,10 @@ char *__env[1] = { 0 };
 char **environ = __env;
 
 
-/* Functions */
-void initialise_monitor_handles()
-{
-}
+///* Functions */
+//void initialise_monitor_handles()
+//{
+//}
 
 int _getpid(void)
 {
@@ -122,11 +122,11 @@ __attribute__((weak)) int _write(int file, char *ptr, int len)
   return len;
 }
 
-int _close(int file)
-{
-  (void)file;
-  return -1;
-}
+//int _close(int file)
+//{
+//  (void)file;
+//  return -1;
+//}
 
 
 int _fstat(int file, struct stat *st)
@@ -136,27 +136,27 @@ int _fstat(int file, struct stat *st)
   return 0;
 }
 
-int _isatty(int file)
-{
-  (void)file;
-  return 1;
-}
+//int _isatty(int file)
+//{
+//  (void)file;
+//  return 1;
+//}
 
-int _lseek(int file, int ptr, int dir)
-{
-  (void)file;
-  (void)ptr;
-  (void)dir;
-  return 0;
-}
+//int _lseek(int file, int ptr, int dir)
+//{
+//  (void)file;
+//  (void)ptr;
+//  (void)dir;
+//  return 0;
+//}
 
-int _open(char *path, int flags, ...)
-{
-  (void)path;
-  (void)flags;
-  /* Pretend like we always fail */
-  return -1;
-}
+//int _open(char *path, int flags, ...)
+//{
+//  (void)path;
+//  (void)flags;
+//  /* Pretend like we always fail */
+//  return -1;
+//}
 
 int _wait(int *status)
 {
@@ -165,18 +165,18 @@ int _wait(int *status)
   return -1;
 }
 
-int _unlink(char *name)
-{
-  (void)name;
-  errno = ENOENT;
-  return -1;
-}
+//int _unlink(char *name)
+//{
+//  (void)name;
+//  errno = ENOENT;
+//  return -1;
+//}
 
-int _times(struct tms *buf)
-{
-  (void)buf;
-  return -1;
-}
+//int _times(struct tms *buf)
+//{
+//  (void)buf;
+//  return -1;
+//}
 
 int _stat(char *file, struct stat *st)
 {

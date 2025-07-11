@@ -1,0 +1,17 @@
+10:51:49 **** Incremental Build of configuration Debug for project led_on ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32C011F4Ux -DSTM32 -DSTM32C0 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "led_on.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\crist\Desktop\Udemy\Microcontroller Embedded C Programming\My_workspace\target\led_on\STM32C011F4UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_on.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led_on.elf
+ 
+arm-none-eabi-size  led_on.elf 
+arm-none-eabi-objdump -h -S led_on.elf  > "led_on.list"
+   text	   data	    bss	    dec	    hex	filename
+    528	      0	   1568	   2096	    830	led_on.elf
+Finished building: default.size.stdout
+ 
+Finished building: led_on.list
+ 
+
+10:51:50 Build Finished. 0 errors, 0 warnings. (took 1s.367ms)
+

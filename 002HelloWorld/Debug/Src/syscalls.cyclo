@@ -1,0 +1,12 @@
+../Src/syscalls.c:48:6:ITM_SendChar	2
+../Src/syscalls.c:80:5:_getpid	1
+../Src/syscalls.c:85:5:_kill	1
+../Src/syscalls.c:93:6:_exit	1
+../Src/syscalls.c:99:27:_read	2
+../Src/syscalls.c:112:27:_write	2
+../Src/syscalls.c:132:5:_fstat	1
+../Src/syscalls.c:161:5:_wait	1
+../Src/syscalls.c:181:5:_stat	1
+../Src/syscalls.c:188:5:_link	1
+../Src/syscalls.c:196:5:_fork	1
+../Src/syscalls.c:202:5:_execve	1
