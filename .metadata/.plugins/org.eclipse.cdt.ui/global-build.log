@@ -1,52 +1,42 @@
-11:00:28 **** Build of configuration Debug for project 002_led_on ****
-make -j12 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "002_led_on.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\crist\Desktop\Udemy\Microcontroller Embedded C Programming\My_workspace\target\002_led_on\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_led_on.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 002_led_on.elf
- 
-arm-none-eabi-size  002_led_on.elf 
-arm-none-eabi-objdump -h -S 002_led_on.elf  > "002_led_on.list"
-   text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	002_led_on.elf
-Finished building: default.size.stdout
- 
-Finished building: 002_led_on.list
- 
-11:00:43 **** Incremental Build of configuration Debug for project 002_led_on ****
-make -j12 all 
-arm-none-eabi-size  002_led_on.elf 
-   text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	002_led_on.elf
-Finished building: default.size.stdout
- 
-11:01:27 **** Incremental Build of configuration Debug for project 002_led_on ****
+13:31:50 **** Incremental Build of configuration Debug for project toggle_led ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "002_led_on.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\crist\Desktop\Udemy\Microcontroller Embedded C Programming\My_workspace\target\002_led_on\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_led_on.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 002_led_on.elf
+arm-none-eabi-gcc -o "toggle_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\crist\Desktop\Udemy\Microcontroller Embedded C Programming\My_workspace\target\toggle_led\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="toggle_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: toggle_led.elf
  
-arm-none-eabi-size  002_led_on.elf 
-arm-none-eabi-objdump -h -S 002_led_on.elf  > "002_led_on.list"
+arm-none-eabi-size  toggle_led.elf 
+arm-none-eabi-objdump -h -S toggle_led.elf  > "toggle_led.list"
    text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	002_led_on.elf
+    772	      0	   1568	   2340	    924	toggle_led.elf
 Finished building: default.size.stdout
  
-Finished building: 002_led_on.list
+Finished building: toggle_led.list
  
-11:06:25 **** Incremental Build of configuration Debug for project printf_exercise_with_ITM ****
+13:32:12 **** Incremental Build of configuration Debug for project toggle_led ****
 make -j12 all 
-arm-none-eabi-size  printf_exercise_with_ITM.elf 
+arm-none-eabi-size  toggle_led.elf 
    text	   data	    bss	    dec	    hex	filename
-   3420	     92	   1900	   5412	   1524	printf_exercise_with_ITM.elf
+    772	      0	   1568	   2340	    924	toggle_led.elf
 Finished building: default.size.stdout
  
-11:07:06 **** Incremental Build of configuration Debug for project 002_led_on ****
+13:32:37 **** Incremental Build of configuration Debug for project toggle_led ****
 make -j12 all 
-arm-none-eabi-size  002_led_on.elf 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "toggle_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\crist\Desktop\Udemy\Microcontroller Embedded C Programming\My_workspace\target\toggle_led\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="toggle_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: toggle_led.elf
+ 
+arm-none-eabi-size  toggle_led.elf 
+arm-none-eabi-objdump -h -S toggle_led.elf  > "toggle_led.list"
    text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	002_led_on.elf
+    772	      0	   1568	   2340	    924	toggle_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: toggle_led.list
+ 
+15:11:38 **** Incremental Build of configuration Debug for project toggle_led ****
+make -j12 all 
+arm-none-eabi-size  toggle_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      0	   1568	   2340	    924	toggle_led.elf
 Finished building: default.size.stdout
  
